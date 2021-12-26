@@ -19,4 +19,4 @@ const debounce = (func, delay) => {
     }
 }
 
-export { success,error,warning,debounce };
+export { success,error,debounce };
