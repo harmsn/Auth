@@ -68,7 +68,7 @@ function Signup({dispatch}) {
   return (
     <>
       {localStorage.getItem('token') !==null ? 
-        <div>
+        <div >
           <Form
           name="EmailForm"
           onFinish={onFinish}
@@ -76,7 +76,7 @@ function Signup({dispatch}) {
           >
             <InputField placeholder={"Enter First Name"} name={firstName} onChange={e => {handleChange(e,1)}} value={firstName} type={"text"}/>
             <InputField placeholder={"Enter Referal Code"} name={referal} onChange={e => handleChange(e,4)} value={referal} type={"text"}/>
-            <Button type="primary" htmlType="submit" disabled={flagValid ? false : true}>
+            <Button type="primary" htmlType="submit" disabled={flagValid ? false : true} style={{margin:'auto', display:'block', marginTop:'12px'}}>
               Signup
             </Button>
           </Form> 
