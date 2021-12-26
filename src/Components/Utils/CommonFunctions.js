@@ -7,10 +7,6 @@ const success = (msg) => {
 const error = (msg) => {
     message.error(msg);
 };
-  
-const warning = (msg) => {
-    message.warning(msg);
-};
 
 const debounce = (func, delay) => {
     let debounceTimer
