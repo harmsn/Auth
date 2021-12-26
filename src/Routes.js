@@ -1,9 +1,7 @@
 import React from 'react';
 import {
     BrowserRouter as Router,
-    Switch,
     Route,
-    Link,
     Routes,
   } from "react-router-dom";
 import  Login from './Components/UnAuthenticated/Login'

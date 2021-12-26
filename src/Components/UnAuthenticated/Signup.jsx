@@ -6,7 +6,7 @@ import AuthService from '../Services/login'
 import { useLocation,useNavigate,Navigate } from "react-router-dom"
 import { connect } from 'react-redux'
 import { addProfile } from '../Store/Actions'
-import { error,success } from '../Utils/CommonFunctions'
+import { error } from '../Utils/CommonFunctions'
 
 function Signup({dispatch}) {
   
