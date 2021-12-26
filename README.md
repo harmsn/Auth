@@ -22,21 +22,21 @@ Live URL: https://authenticationbas.herokuapp.com/
         
         3.2 Unauthentiated<br/>
           3.2.1 Login<br/>
-          3.2.2 Signup__
-          3.2.3 Can be added more based on the need.__ 
+          3.2.2 Signup<br/>
+          3.2.3 Can be added more based on the need.<br/>
 
-        3.3 Reusable Components__
-          3.3.1 InputField //Global input field to be used everywhere to maintain consistency__
-          3.3.2 ... Can be added more__
+        3.3 Reusable Components<br/>
+          3.3.1 InputField //Global input field to be used everywhere to maintain consistency<br/>
+          3.3.2 ... Can be added more<br/>
           
-        3.4 Service // Services for the functinaities.
-          3.4.1   Authentication //handle all the authentication based requests.
-          3.4.2   ...Can be added more
+        3.4 Service // Services for the functinaities.<br/>
+          3.4.1   Authentication //handle all the authentication based requests.<br/>
+          3.4.2   ...Can be added more<br/>
           
-        3.5 Store //Global store
-          3.5.1 Actions //Handles the actions
-          3.5.2 Reducers //Handles the global state   
+        3.5 Store //Global store<br/>
+          3.5.1 Actions //Handles the actions<br/>
+          3.5.2 Reducers //Handles the global state<br/>   
 
-        3.6 Utils //Utility functions common for the portal
-          3.6.1 Validations //Validation patterns for email, ...
-          3.6.2 Reusable Functions // Debouncing, Error, Success
+        3.6 Utils //Utility functions common for the portal<br/>
+          3.6.1 Validations //Validation patterns for email, ...<br/>
+          3.6.2 Reusable Functions // Debouncing, Error, Success<br/>
