@@ -83,24 +83,24 @@ function Login({ dispatch }) {
   },[otp])
 
   return (
-      <div>
+      <div style={{display:'flex',flexDirection:'column',padding:'30px'}}>
         { !step && <Form
         name="EmailForm"
         onFinish={onFinish}
         autoComplete="off"
         >
           <InputField placeholder={"Enter Email"} name={email} onChange={handleChangeEmail} value={email} type={"text"}/>
-          <Button type="primary" htmlType="submit" disabled={flagValid ? false : true}>
+          <Button type="primary" htmlType="submit" disabled={flagValid ? false : true} style={{margin:'auto', display:'block', marginTop:'12px'}}>
             Get OTP
           </Button>
         </Form> }
         {step && <Form name="EmailForm"
           onFinish={onFinishOtp}>
           <InputField placeholder={"Enter otp"} name={email} onChange={handleChangeOtp} value={otp} type={"text"}/>
-          <Button type="primary" htmlType="submit" disabled={flagValid ? false : true}>
+          <Button type="primary" htmlType="submit" disabled={flagValid ? false : true} style={{margin:'auto', display:'block', marginTop:'12px'}}>
             Enter OTP
           </Button>
-          <Button onClick = {debounce(resendOtp,1000)}> Resend OTP</Button>
+          <Button onClick = {debounce(resendOtp,1000)} style={{margin:'auto', display:'block',marginTop:'12px'}}> Resend OTP</Button>
         </Form>}
       </div>
   );

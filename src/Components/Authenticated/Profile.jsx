@@ -18,13 +18,13 @@ function Profile(props) {
   }
 
   return (
-    <>
+    <div style={{display:'flex',flexDirection:'column',alignItems:'center',padding:'30px',textAlign:'center'}}>
      {localStorage.getItem('token') !== null ?  <div><p>{userProfile?.firstName}</p>
       <p>{userProfile?.email}</p>
       <p>{userProfile?.phoneNumber}</p>
       <p>{userProfile?.expertise}</p>
       <Button onClick={logOut}>Logout</Button></div>: <Navigate to='/login'/>}
-    </>
+    </div>
   );
 }
 
