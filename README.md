@@ -1,4 +1,4 @@
-# Getting Started with App
+# Getting Started with Authentication Application
 
 Live URL: https://authenticationbas.herokuapp.com/
 
