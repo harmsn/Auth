@@ -1,4 +1,3 @@
-import {useState,useEffect} from 'react'
 import { connect } from 'react-redux'
 import { Button } from 'antd';
 import AuthService from '../Services/login';
@@ -7,7 +6,7 @@ import { error} from '../Utils/CommonFunctions'
 
 function Profile(props) {
 
-  const [userProfile,setProfile] = useState(props?.user?.profile);
+  const userProfile = props?.user?.profile;
   let navigate = useNavigate();
 
   function logOut(){
