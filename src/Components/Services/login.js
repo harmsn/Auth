@@ -1,13 +1,17 @@
 import axios from "axios";
 
-const API_URL = "https://hiring.getbasis.co/candidate/users";
+const API_URL = "https://hiring.getbasis.co/candidate/users"; //baase url
+
+//Global Authentication Service 
 
 const AuthService = {
 
+    //email verify for otp 
     emailVerification: function (email) {
         return axios.post(API_URL + "/email", { email: email });
     },
 
+    //verify the entered otp
     verifyToken: function (token, email, verificationCode) {
         return axios.put(API_URL + "/email/verify", {
             token,
@@ -16,6 +20,7 @@ const AuthService = {
         });
     },
 
+    //signup api
     signUp: function (
         firstName,
         referredCodeKey,
@@ -34,12 +39,14 @@ const AuthService = {
         });
     },
 
+    //referral input code verification
     verifyReferral: function (code) {
         return axios.get(API_URL + `/referral/${code}`, {
             headers: this.authHeader(),
         });
     },
 
+    //logout api
     logout: function (_id, token) {
         localStorage.removeItem("token");
         return axios.delete(API_URL + `/logout/${_id}`, {
@@ -47,6 +54,7 @@ const AuthService = {
         });
     },
 
+    //resend the otp again
     resendOtp: function (token,email) {
         return axios.put(API_URL + "/token/resendtoken", {
             token,
@@ -54,14 +62,7 @@ const AuthService = {
         });
     },
 
-    getToken: function () {
-        return localStorage.getItem("token");
-    },
-
-    saveToken: function (token) {
-        localStorage.setItem("token", token);
-    },
-
+    //authentication header
     authHeader: function () {
         return { Authorization: this.getToken() };
     },

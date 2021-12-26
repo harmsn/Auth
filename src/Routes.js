@@ -8,6 +8,7 @@ import  Login from './Components/UnAuthenticated/Login'
 import  Signup from './Components/UnAuthenticated/Signup'
 import Profile  from './Components/Authenticated/Profile';
 
+//Routes to be inserted here. index.js will be the root component.
 const createRoutes = () => (
     <Router>
       <Routes>
