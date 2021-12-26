@@ -23,6 +23,7 @@ function Login({ dispatch }) {
       localStorage.setItem('token',res?.data?.results?.token);
       setToken(res?.data?.results?.token)
       setStep(true);
+      setFlagValid(false);
     }).catch(err=>{
       error(err);
     })
@@ -30,11 +31,15 @@ function Login({ dispatch }) {
 
   const onFinishOtp = (values) => {
     AuthService.verifyToken(token,email,otp).then((res)=>{
-      if(res?.data?.results?.isLogin){
-        dispatch(addProfile(res?.data?.results?.user));
-        navigate('/profile');
+      if(res?.data?.success){
+        if(res?.data?.results?.isLogin){
+          dispatch(addProfile(res?.data?.results?.user));
+          navigate('/profile');
+        }else {
+          navigate('/signup',{ state: { email: email } });
+        }
       }else{
-        navigate('/signup',{ state: { email: email } });
+        error(res?.data?.message);
       }
     }).catch(err=>{
       error(err);
