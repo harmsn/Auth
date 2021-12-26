@@ -4,24 +4,24 @@ Live URL: https://authenticationbas.herokuapp.com/
 
 1.Steps to install on the local :
 
-  1. clone the repo__
-  2. cd  directory__
-  3. npm install__
-  4. npm start__
+  1. clone the repo<br/>
+  2. cd  directory<br/>
+  3. npm install<br/>
+  4. npm start<br/>
 
 
 
-2. Structure of directory__
-  1. src__
-      1.index.js // Root__
-      2.Routes.js //Handles all the routing__
-      3.Components__
-        3.1.Authenticated__
-          3.1.1.Profile__
-          3.1.2 ... Can be added more based on the requiremnt.__
+2. Structure of directory<br/>
+  1. src<br/>
+      1.index.js // Root<br/>
+      2.Routes.js //Handles all the routing<br/>
+      3.Components<br/>
+        3.1.Authenticated<br/>
+          3.1.1.Profile<br/>
+          3.1.2 ... Can be added more based on the requiremnt.<br/>
         
-        3.2 Unauthentiated__
-          3.2.1 Login__
+        3.2 Unauthentiated<br/>
+          3.2.1 Login<br/>
           3.2.2 Signup__
           3.2.3 Can be added more based on the need.__ 
 
